@@ -1,26 +1,26 @@
-name: Send Telegram Message Every Hour
+# name: Send Telegram Message Every Hour
 
-on:
-  schedule:
-    # Runs at minute 0 of every hour from Monday to Friday (UTC)
-    - cron: '10 * * * 1-6'
-  workflow_dispatch:  # Allows manual run from the GitHub UI
+# on:
+#   schedule:
+#     # Runs at minute 0 of every hour from Monday to Friday (UTC)
+#     - cron: '10 * * * 1-6'
+#   workflow_dispatch:  # Allows manual run from the GitHub UI
 
-jobs:
-  send_telegram_message:
-    runs-on: ubuntu-latest
+# jobs:
+#   send_telegram_message:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout repo
+#         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install requests
+#       - name: Install dependencies
+#         run: pip install requests
 
-      - name: Run bot script
-        run: python cron_test.py
+#       - name: Run bot script
+#         run: python cron_test.py
