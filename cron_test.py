@@ -1,7 +1,9 @@
 bot_token = '8098425878:AAHtqEidzKKzpi5pzAi8FAZE1B82AOUJsgI'
 import requests
+import datetime as dt 
+
 chat_id = '1725303057'
-message = 'The san ti are coming'
+message = 'The san ti are coming. '+ dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 send_url = f'https://api.telegram.org/bot{bot_token}/sendMessage'
 payload = {'chat_id': chat_id, 'text': message}
